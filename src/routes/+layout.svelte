@@ -12,8 +12,9 @@
     >
       Syllabus
     </a>
-    <a href="/lectures">All Lectures</a>
-    <a href="/lectures/agile-project-structure">Upcoming Lecture</a>
+    <a href="/calendar">Calendar</a>
+    <a href="/lectures/agile-project-structure">Recent Lecture</a>
+    <a href="/assignments/site-research">Current Assignment</a>
   </nav>
 
   <main>
