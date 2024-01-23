@@ -5,7 +5,7 @@
 
 <div class="content">
   <nav>
-    <a href="/home">Home</a>
+    <a href="/">Home</a>
     <a
       href="https://docs.google.com/document/d/1JfdKFSfW3PTs8Vi7Rxm4vrz6hr4II4jjGw8VHISr2h8/edit?usp=sharing"
       target="_blank"
@@ -13,7 +13,7 @@
       Syllabus
     </a>
     <a href="/lectures">All Lectures</a>
-    <a href="/lectures/upcoming">Upcoming Lecture</a>
+    <a href="/lectures/agile-project-structure">Upcoming Lecture</a>
   </nav>
 
   <main>
