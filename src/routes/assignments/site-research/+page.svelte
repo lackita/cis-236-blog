@@ -1,6 +1,6 @@
 <h1>Site Research</h1>
 
-<p>Due Date: Day of meeting</p>
+<p>Due Date: Feb 1</p>
 
 <p>
   You will be meeting with Jamie, one of the farmers, to discuss building a

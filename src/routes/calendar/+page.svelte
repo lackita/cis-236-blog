@@ -30,12 +30,12 @@
     <td>
       <a href="/assignments/site-research">Site Research</a>
     </td>
-    <td>Jan 30</td>
+    <td>Feb 1</td>
     <td>No revisions</td>
   </tr>
 
   <tr>
-    <td>Jan 30</td>
+    <td>Feb 1</td>
     <td>Meet With Client</td>
     <td>Story Creation</td>
     <td>Feb 6</td>
