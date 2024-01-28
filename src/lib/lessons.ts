@@ -1,13 +1,14 @@
-interface Lecture {
-  date: Date;
-  end: Date;
+interface Material {
   title: string;
   path_name?: string;
 }
 
-interface Assignment {
-  title: string;
-  path_name?: string;
+interface Lecture extends Material {
+  date: Date;
+  end: Date;
+}
+
+interface Assignment extends Material {
   due: Date;
   revisions?: Date;
 }
@@ -200,5 +201,5 @@ const calendar: Week[] = [
   },
 ];
 
-export type { Week };
+export type { Week, Material };
 export { calendar };
