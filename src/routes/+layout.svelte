@@ -13,7 +13,7 @@
       Syllabus
     </a>
     <a href="/calendar">Calendar</a>
-    <a href="/lectures/agile-project-structure">Recent Lecture</a>
+    <a href="/lectures/meet-with-client">Upcoming Class</a>
     <a href="/assignments/site-research">Current Assignment</a>
   </nav>
 

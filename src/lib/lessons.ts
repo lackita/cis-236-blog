@@ -1,4 +1,5 @@
 import AgileProjectStructure from "$lib/lectures/AgileProjectStructure.svelte";
+import MeetWithClient from "$lib/lectures/MeetWithClient.svelte";
 import SiteResearch from "$lib/assignments/SiteResearch.svelte";
 import type { ComponentType } from "svelte";
 
@@ -23,26 +24,45 @@ interface Week {
   assignment?: Assignment;
 }
 
-const calendar: Week[] = [
+type Materials<T extends Material> = { [path_name: string]: T };
+
+function build_material<T extends Material>(materials: T[]): Materials<T> {
+  return materials.reduce((materials: Materials<T>, material: T) => {
+    return { ...materials, [material.path_name as string]: material };
+  }, {});
+}
+
+const lectures = build_material([
   {
-    lecture: {
-      date: new Date(2024, 0, 23),
-      title: "Agile Project Structure",
-      path_name: "agile-project-structure",
-      component: AgileProjectStructure,
-    },
-    assignment: {
-      title: "Site Research",
-      path_name: "site-research",
-      due: new Date(2024, 1, 1),
-      component: SiteResearch,
-    },
+    date: new Date(2024, 0, 23),
+    title: "Agile Project Structure",
+    path_name: "agile-project-structure",
+    component: AgileProjectStructure,
   },
   {
-    lecture: {
-      date: new Date(2024, 1, 1),
-      title: "Meet With Client",
-    },
+    date: new Date(2024, 1, 1),
+    title: "Meet With Client",
+    path_name: "meet-with-client",
+    component: MeetWithClient,
+  },
+]);
+
+const assignments = build_material([
+  {
+    title: "Site Research",
+    path_name: "site-research",
+    due: new Date(2024, 1, 1),
+    component: SiteResearch,
+  },
+]);
+
+const calendar: Week[] = [
+  {
+    lecture: lectures["agile-project-structure"],
+    assignment: assignments["site-research"],
+  },
+  {
+    lecture: lectures["meet-with-client"],
     assignment: {
       title: "Story Creation",
       due: new Date(2024, 1, 6),
