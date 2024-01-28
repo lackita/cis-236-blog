@@ -68,4 +68,8 @@
   table {
     width: 100%;
   }
+
+  table th {
+    background-color: #e6e6e6;
+  }
 </style>

@@ -1,11 +1,16 @@
+import AgileProjectStructure from "$lib/lectures/AgileProjectStructure.svelte";
+import SiteResearch from "$lib/assignments/SiteResearch.svelte";
+import type { ComponentType } from "svelte";
+
 interface Material {
   title: string;
   path_name?: string;
+  component?: ComponentType;
 }
 
 interface Lecture extends Material {
   date: Date;
-  end: Date;
+  end?: Date;
 }
 
 interface Assignment extends Material {
@@ -24,11 +29,13 @@ const calendar: Week[] = [
       date: new Date(2024, 0, 23),
       title: "Agile Project Structure",
       path_name: "agile-project-structure",
+      component: AgileProjectStructure,
     },
     assignment: {
       title: "Site Research",
       path_name: "site-research",
       due: new Date(2024, 1, 1),
+      component: SiteResearch,
     },
   },
   {
@@ -201,5 +208,14 @@ const calendar: Week[] = [
   },
 ];
 
+function lecture(path_name: string): Lecture {
+  return calendar.find((week) => week.lecture.path_name === path_name)!.lecture;
+}
+
+function assignment(path_name: string): Assignment {
+  return calendar.find((week) => week.assignment!.path_name === path_name)!
+    .assignment as Assignment;
+}
+
 export type { Week, Material };
-export { calendar };
+export { calendar, lecture, assignment };
