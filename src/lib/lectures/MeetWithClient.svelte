@@ -67,10 +67,8 @@
 
 <p>
   Following the initial capture of ideas, we'll circle back to each of the cards
-  to break them down into smaller pieces. Recall the INVEST acronym from the
-  <a href="/lectures/agile-project-structure">first lecture</a>, we are working
-  towards that in our conversation. Here is a general outline of how that should
-  go:
+  to break them down into smaller pieces. Here is a general outline of how that
+  should go:
 </p>
 
 <ol>

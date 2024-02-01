@@ -35,7 +35,7 @@
 </p>
 
 <p>
-  Every assignment will involve a Pull Requeston <a
+  Every assignment will involve a Pull Request on <a
     href="https://github.com/lackita/northofboston.farm">this github repo</a
   >. You can find general instructions on how to create a pull request
   <a
