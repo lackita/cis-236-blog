@@ -1,6 +1,9 @@
 import AgileProjectStructure from "$lib/lectures/AgileProjectStructure.svelte";
 import MeetWithClient from "$lib/lectures/MeetWithClient.svelte";
+
 import SiteResearch from "$lib/assignments/SiteResearch.svelte";
+import StoryCreation from "$lib/assignments/StoryCreation.svelte";
+
 import type { ComponentType } from "svelte";
 
 interface Material {
@@ -54,6 +57,12 @@ const assignments = build_material([
     due: new Date(2024, 1, 1),
     component: SiteResearch,
   },
+  {
+    title: "Story Creation",
+    path_name: "story-creation",
+    due: new Date(2024, 1, 6),
+    component: StoryCreation,
+  },
 ]);
 
 const calendar: Week[] = [
@@ -63,11 +72,7 @@ const calendar: Week[] = [
   },
   {
     lecture: lectures["meet-with-client"],
-    assignment: {
-      title: "Story Creation",
-      due: new Date(2024, 1, 6),
-      revisions: new Date(2024, 1, 9),
-    },
+    assignment: assignments["story-creation"],
   },
 
   {

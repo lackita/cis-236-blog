@@ -218,3 +218,8 @@
   </li>
   <li>What did you find difficult about this process?</li>
 </ul>
+
+<p>
+  Since we'll be working from the results of this in our next class, you won't
+  have an opportunity to make revisions.
+</p>
