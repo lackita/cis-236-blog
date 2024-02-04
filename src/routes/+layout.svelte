@@ -1,6 +1,7 @@
 <script lang="ts">
   import Icon from "@iconify/svelte";
   import "./styles.css";
+  import { current_assignment, current_lecture } from "$lib/lessons";
 </script>
 
 <div class="content">
@@ -13,8 +14,12 @@
       Syllabus
     </a>
     <a href="/calendar">Calendar</a>
-    <a href="/lectures/meet-with-client">Recent Class</a>
-    <a href="/assignments/story-creation">Current Assignment</a>
+    <a href="/lectures/{current_lecture.path_name}">
+      {#if current_lecture.date < new Date()}Recent{:else}Upcoming{/if} Class
+    </a>
+    <a href="/assignments/story-creation">
+      {#if current_assignment.due < new Date()}Recent{:else}Current{/if} Assignment
+    </a>
   </nav>
 
   <main>

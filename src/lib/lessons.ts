@@ -1,5 +1,6 @@
 import AgileProjectStructure from "$lib/lectures/AgileProjectStructure.svelte";
 import MeetWithClient from "$lib/lectures/MeetWithClient.svelte";
+import PlanningAndWebFrameworks from "$lib/lectures/PlanningAndWebFrameworks.svelte";
 
 import SiteResearch from "$lib/assignments/SiteResearch.svelte";
 import StoryCreation from "$lib/assignments/StoryCreation.svelte";
@@ -48,6 +49,12 @@ const lectures = build_material([
     path_name: "meet-with-client",
     component: MeetWithClient,
   },
+  {
+    date: new Date(2024, 1, 6),
+    title: "Planning and Web Frameworks",
+    path_name: "planning-and-web-frameworks",
+    component: PlanningAndWebFrameworks,
+  },
 ]);
 
 const assignments = build_material([
@@ -76,12 +83,9 @@ const calendar: Week[] = [
   },
 
   {
-    lecture: {
-      date: new Date(2024, 1, 6),
-      title: "Estimation and Planning",
-    },
+    lecture: lectures["planning-and-web-frameworks"],
     assignment: {
-      title: "Project Plan",
+      title: "Svelte and SvelteKit",
       due: new Date(2024, 1, 13),
       revisions: new Date(2024, 1, 16),
     },
@@ -242,5 +246,17 @@ function assignment(path_name: string): Assignment {
     .assignment as Assignment;
 }
 
+const current_lecture: Lecture = calendar.reduce(
+  (most_recent: Lecture, week: Week) =>
+    week.lecture.component ? week.lecture : most_recent,
+  {} as Lecture,
+);
+
+const current_assignment: Assignment = calendar.reduce(
+  (most_recent: Assignment, week: Week) =>
+    week.assignment?.path_name ? week.assignment : most_recent,
+  {} as Assignment,
+);
+
 export type { Week, Material };
-export { calendar, lecture, assignment };
+export { calendar, lecture, assignment, current_lecture, current_assignment };
