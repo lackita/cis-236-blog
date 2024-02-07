@@ -2,7 +2,8 @@
   import { assignment } from "$lib/lessons.js";
 
   export let data: { name: string };
-  const Page = assignment(data.name).component;
+  const assign = assignment(data.name);
+  const Page = assign.component;
 </script>
 
-<Page />
+<Page assignment={assign} />

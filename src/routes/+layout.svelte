@@ -2,6 +2,10 @@
   import Icon from "@iconify/svelte";
   import "./styles.css";
   import { current_assignment, current_lecture } from "$lib/lessons";
+  import { onMount } from "svelte";
+  import { language } from "$lib/date";
+
+  onMount(() => language.set(navigator.language));
 </script>
 
 <div class="content">
@@ -17,7 +21,7 @@
     <a href="/lectures/{current_lecture.path_name}">
       {#if current_lecture.date < new Date()}Recent{:else}Upcoming{/if} Class
     </a>
-    <a href="/assignments/story-creation">
+    <a href="/assignments/{current_assignment.path_name}">
       {#if current_assignment.due < new Date()}Recent{:else}Current{/if} Assignment
     </a>
   </nav>

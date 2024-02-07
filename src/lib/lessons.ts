@@ -4,6 +4,7 @@ import PlanningAndWebFrameworks from "$lib/lectures/PlanningAndWebFrameworks.sve
 
 import SiteResearch from "$lib/assignments/SiteResearch.svelte";
 import StoryCreation from "$lib/assignments/StoryCreation.svelte";
+import SvelteAndSvelteKit from "$lib/assignments/SvelteAndSvelteKit.svelte";
 
 import type { ComponentType } from "svelte";
 
@@ -38,19 +39,19 @@ function build_material<T extends Material>(materials: T[]): Materials<T> {
 
 const lectures = build_material([
   {
-    date: new Date(2024, 0, 23),
+    date: new Date(2024, 0, 23, 14),
     title: "Agile Project Structure",
     path_name: "agile-project-structure",
     component: AgileProjectStructure,
   },
   {
-    date: new Date(2024, 1, 1),
+    date: new Date(2024, 1, 1, 14),
     title: "Meet With Client",
     path_name: "meet-with-client",
     component: MeetWithClient,
   },
   {
-    date: new Date(2024, 1, 6),
+    date: new Date(2024, 1, 6, 14),
     title: "Planning and Web Frameworks",
     path_name: "planning-and-web-frameworks",
     component: PlanningAndWebFrameworks,
@@ -61,14 +62,21 @@ const assignments = build_material([
   {
     title: "Site Research",
     path_name: "site-research",
-    due: new Date(2024, 1, 1),
+    due: new Date(2024, 1, 1, 14),
     component: SiteResearch,
   },
   {
     title: "Story Creation",
     path_name: "story-creation",
-    due: new Date(2024, 1, 6),
+    due: new Date(2024, 1, 6, 14),
     component: StoryCreation,
+  },
+  {
+    title: "Svelte and SvelteKit",
+    path_name: "svelte-and-svelte-kit",
+    due: new Date(2024, 1, 13, 14),
+    revisions: new Date(2024, 1, 16),
+    component: SvelteAndSvelteKit,
   },
 ]);
 
@@ -84,11 +92,7 @@ const calendar: Week[] = [
 
   {
     lecture: lectures["planning-and-web-frameworks"],
-    assignment: {
-      title: "Svelte and SvelteKit",
-      due: new Date(2024, 1, 13),
-      revisions: new Date(2024, 1, 16),
-    },
+    assignment: assignments["svelte-and-svelte-kit"],
   },
 
   {
@@ -253,10 +257,11 @@ const current_lecture: Lecture = calendar.reduce(
 );
 
 const current_assignment: Assignment = calendar.reduce(
-  (most_recent: Assignment, week: Week) =>
-    week.assignment?.path_name ? week.assignment : most_recent,
+  (most_recent: Assignment, week: Week) => {
+    return week.assignment?.path_name ? week.assignment : most_recent;
+  },
   {} as Assignment,
 );
 
-export type { Week, Material };
+export type { Week, Material, Assignment };
 export { calendar, lecture, assignment, current_lecture, current_assignment };

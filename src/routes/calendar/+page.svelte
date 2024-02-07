@@ -1,17 +1,7 @@
 <script lang="ts">
+  import { format_date } from "$lib/date";
   import { calendar } from "$lib/lessons";
-  import { onMount } from "svelte";
   import Title from "./Title.svelte";
-
-  let language: string;
-  onMount(() => (language = navigator.language));
-  function format_date(date: Date): string {
-    return date.toLocaleDateString(language, {
-      weekday: "short",
-      month: "short",
-      day: "numeric",
-    });
-  }
 </script>
 
 <h1>Calendar</h1>
