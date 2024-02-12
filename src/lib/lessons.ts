@@ -1,6 +1,7 @@
 import AgileProjectStructure from "$lib/lectures/AgileProjectStructure.svelte";
 import MeetWithClient from "$lib/lectures/MeetWithClient.svelte";
 import PlanningAndWebFrameworks from "$lib/lectures/PlanningAndWebFrameworks.svelte";
+import Hosting from "$lib/lectures/Hosting.svelte";
 
 import SiteResearch from "$lib/assignments/SiteResearch.svelte";
 import StoryCreation from "$lib/assignments/StoryCreation.svelte";
@@ -56,6 +57,12 @@ const lectures = build_material([
     path_name: "planning-and-web-frameworks",
     component: PlanningAndWebFrameworks,
   },
+  {
+    date: new Date(2024, 1, 13),
+    title: "Hosting",
+    path_name: "hosting",
+    component: Hosting,
+  },
 ]);
 
 const assignments = build_material([
@@ -96,12 +103,9 @@ const calendar: Week[] = [
   },
 
   {
-    lecture: {
-      date: new Date(2024, 1, 13),
-      title: "Web Frameworks",
-    },
+    lecture: lectures["hosting"],
     assignment: {
-      title: "Svelte and SvelteKit",
+      title: "Deploy Your Site",
       due: new Date(2024, 1, 20),
       revisions: new Date(2024, 1, 23),
     },
@@ -110,7 +114,7 @@ const calendar: Week[] = [
   {
     lecture: {
       date: new Date(2024, 1, 20),
-      title: "User Experience",
+      title: "User Experience and Accessibility",
     },
     assignment: {
       title: "Static Content and User Profiles",
@@ -263,5 +267,5 @@ const current_assignment: Assignment = calendar.reduce(
   {} as Assignment,
 );
 
-export type { Week, Material, Assignment };
+export type { Week, Material, Assignment, Lecture };
 export { calendar, lecture, assignment, current_lecture, current_assignment };

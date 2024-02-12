@@ -2,7 +2,8 @@
   import { lecture } from "$lib/lessons.js";
 
   export let data: { name: string };
-  const Page = lecture(data.name).component;
+  const lect = lecture(data.name);
+  const Page = lect.component;
 </script>
 
-<Page />
+<Page lecture={lect} />
