@@ -6,6 +6,7 @@ import Hosting from "$lib/lectures/Hosting.svelte";
 import SiteResearch from "$lib/assignments/SiteResearch.svelte";
 import StoryCreation from "$lib/assignments/StoryCreation.svelte";
 import SvelteAndSvelteKit from "$lib/assignments/SvelteAndSvelteKit.svelte";
+import DeployYourSite from "$lib/assignments/DeployYourSite.svelte";
 
 import type { ComponentType } from "svelte";
 
@@ -30,84 +31,66 @@ interface Week {
   assignment?: Assignment;
 }
 
-type Materials<T extends Material> = { [path_name: string]: T };
-
-function build_material<T extends Material>(materials: T[]): Materials<T> {
-  return materials.reduce((materials: Materials<T>, material: T) => {
-    return { ...materials, [material.path_name as string]: material };
-  }, {});
-}
-
-const lectures = build_material([
-  {
-    date: new Date(2024, 0, 23, 14),
-    title: "Agile Project Structure",
-    path_name: "agile-project-structure",
-    component: AgileProjectStructure,
-  },
-  {
-    date: new Date(2024, 1, 1, 14),
-    title: "Meet With Client",
-    path_name: "meet-with-client",
-    component: MeetWithClient,
-  },
-  {
-    date: new Date(2024, 1, 6, 14),
-    title: "Planning and Web Frameworks",
-    path_name: "planning-and-web-frameworks",
-    component: PlanningAndWebFrameworks,
-  },
-  {
-    date: new Date(2024, 1, 13),
-    title: "Hosting",
-    path_name: "hosting",
-    component: Hosting,
-  },
-]);
-
-const assignments = build_material([
-  {
-    title: "Site Research",
-    path_name: "site-research",
-    due: new Date(2024, 1, 1, 14),
-    component: SiteResearch,
-  },
-  {
-    title: "Story Creation",
-    path_name: "story-creation",
-    due: new Date(2024, 1, 6, 14),
-    component: StoryCreation,
-  },
-  {
-    title: "Svelte and SvelteKit",
-    path_name: "svelte-and-svelte-kit",
-    due: new Date(2024, 1, 13, 14),
-    revisions: new Date(2024, 1, 16),
-    component: SvelteAndSvelteKit,
-  },
-]);
-
 const calendar: Week[] = [
   {
-    lecture: lectures["agile-project-structure"],
-    assignment: assignments["site-research"],
-  },
-  {
-    lecture: lectures["meet-with-client"],
-    assignment: assignments["story-creation"],
+    lecture: {
+      date: new Date(2024, 0, 23, 14),
+      title: "Agile Project Structure",
+      path_name: "agile-project-structure",
+      component: AgileProjectStructure,
+    },
+    assignment: {
+      title: "Site Research",
+      path_name: "site-research",
+      due: new Date(2024, 1, 1, 14),
+      component: SiteResearch,
+    },
   },
 
   {
-    lecture: lectures["planning-and-web-frameworks"],
-    assignment: assignments["svelte-and-svelte-kit"],
+    lecture: {
+      date: new Date(2024, 1, 1, 14),
+      title: "Meet With Client",
+      path_name: "meet-with-client",
+      component: MeetWithClient,
+    },
+    assignment: {
+      title: "Story Creation",
+      path_name: "story-creation",
+      due: new Date(2024, 1, 6, 14),
+      component: StoryCreation,
+    },
   },
 
   {
-    lecture: lectures["hosting"],
+    lecture: {
+      date: new Date(2024, 1, 6, 14),
+      title: "Planning and Web Frameworks",
+      path_name: "planning-and-web-frameworks",
+      component: PlanningAndWebFrameworks,
+    },
+    assignment: {
+      title: "Svelte and SvelteKit",
+      path_name: "svelte-and-svelte-kit",
+      due: new Date(2024, 1, 13, 14),
+      revisions: new Date(2024, 1, 16),
+      component: SvelteAndSvelteKit,
+    },
+  },
+
+  {
+    lecture: {
+      date: new Date(2024, 1, 13),
+      title: "Hosting",
+      path_name: "hosting",
+      component: Hosting,
+    },
     assignment: {
       title: "Deploy Your Site",
+      path_name: "deploy-your-site",
       due: new Date(2024, 1, 20),
       revisions: new Date(2024, 1, 23),
+      component: DeployYourSite,
     },
   },
 
