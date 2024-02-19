@@ -2,10 +2,6 @@
   import Icon from "@iconify/svelte";
   import "./styles.css";
   import { current_assignment, current_lecture } from "$lib/lessons";
-  import { onMount } from "svelte";
-  import { language } from "$lib/date";
-
-  onMount(() => language.set(navigator.language));
 </script>
 
 <div class="content">

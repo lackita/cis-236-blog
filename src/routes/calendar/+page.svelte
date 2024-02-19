@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { format_date } from "$lib/date";
+  import Date from "$lib/components/Date.svelte";
   import { calendar } from "$lib/lessons";
   import Title from "./Title.svelte";
 </script>
@@ -18,36 +18,44 @@
 </p>
 
 <table>
-  <tr>
-    <th>Lecture Date</th>
-    <th>Topic</th>
-    <th>Assignment</th>
-    <th>Due Date</th>
-    <th>Final Revision</th>
-  </tr>
-
-  {#each calendar as { lecture, assignment }}
+  <thead>
     <tr>
-      <td>
-        {format_date(lecture.date)}
-        {#if lecture.end}
-          to {format_date(lecture.end)}
-        {/if}
-      </td>
-      <td>
-        <Title prefix="lectures" material={lecture} />
-      </td>
-      {#if assignment}
-        <td>
-          <Title prefix="assignments" material={assignment} />
-        </td>
-        <td>{format_date(assignment.due)}</td>
-        <td>
-          {assignment.revisions ? format_date(assignment.revisions) : "No Revisions"}
-        </td>
-      {/if}
+      <th>Lecture Date</th>
+      <th>Topic</th>
+      <th>Assignment</th>
+      <th>Due Date</th>
+      <th>Final Revision</th>
     </tr>
-  {/each}
+  </thead>
+
+  <tbody>
+    {#each calendar as { lecture, assignment }}
+      <tr>
+        <td>
+          <Date value={lecture.date} />
+          {#if lecture.end}
+            to <Date value={lecture.end} />
+          {/if}
+        </td>
+        <td>
+          <Title prefix="lectures" material={lecture} />
+        </td>
+        {#if assignment}
+          <td>
+            <Title prefix="assignments" material={assignment} />
+          </td>
+          <td><Date value={assignment.due} /></td>
+          <td>
+            {#if assignment.revisions}
+              <Date value={assignment.revisions} />
+            {:else}
+              No Revisions
+            {/if}
+          </td>
+        {/if}
+      </tr>
+    {/each}
+  </tbody>
 </table>
 
 <style>
