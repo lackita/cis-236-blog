@@ -32,21 +32,14 @@
 
   <footer>
     <a href="mailto:colin@colinwilliams.name"
-      ><Icon
-        icon="mdi:email-outline"
-        height="1.5em"
-        style="color: black"
-      />colin@colinwilliams.name</a
+      ><Icon icon="mdi:email-outline" height="1.5em" style="color: black" />colin@colinwilliams.name</a
     >
     <a
       href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1"
       target="_blank"
       rel="license noopener noreferrer"
     >
-      <img
-        alt="Creative Commons"
-        src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-sa.svg"
-      />
+      <img alt="Creative Commons" src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-sa.svg" />
     </a>
   </footer>
 </div>
