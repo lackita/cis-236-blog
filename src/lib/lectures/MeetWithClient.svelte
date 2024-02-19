@@ -21,16 +21,17 @@
 
     <p>
       If this meeting were in person, the stories you'd be working on would be captured in notecards rather than
-      digitally, but the online format requires a digital component so we can collaborate on the planning. I've created a
+      digitally, but the online format requires a digital component so we can collaborate on the planning. I've created
+      a
       <a href="https://github.com/users/lackita/projects/2">Github project</a> to capture this information in, I'll be describing
       both what should be added there and how it would be different if we were using notecards.
     </p>
 
     <p>
-      Notecards are a good tool because of how informal they are. As ideas are discussed and refined, it's important that
-      you're comfortable throwing out old ideas and replacing them with new ones. Tearing up the existing card and writing
-      new ones is a great way to represent that, on our project that will take the form of deleting items and creating new
-      ones in their place.
+      Notecards are a good tool because of how informal they are. As ideas are discussed and refined, it's important
+      that you're comfortable throwing out old ideas and replacing them with new ones. Tearing up the existing card and
+      writing new ones is a great way to represent that, on our project that will take the form of deleting items and
+      creating new ones in their place.
     </p>
 
     <p>
@@ -43,15 +44,15 @@
     <p>
       Once you make a pull request for the research assignment, I will add your account to users which can add stories.
       Once that is done, make sure you can add a story to the list, leave it around as I will be looking for it ahead of
-      the meeting to verify that you will have access. Don't be fooled by the plus sign, after typing the name you have to
-      hit enter to add the item.
+      the meeting to verify that you will have access. Don't be fooled by the plus sign, after typing the name you have
+      to hit enter to add the item.
     </p>
 
     <img alt="Add item to backlog" src={add_item} />
 
     <p>
-      You should also verify that you can remove stories, delete the one created for the screenshots. Make sure to also do
-      this before the meeting with the client, as I will be checking that it's no longer on the project.
+      You should also verify that you can remove stories, delete the one created for the screenshots. Make sure to also
+      do this before the meeting with the client, as I will be checking that it's no longer on the project.
     </p>
 
     <img alt="Delete item from backlog" src={delete_item} />
@@ -78,7 +79,8 @@
         new one for each of these items.
       </li>
       <li>
-        Once they finish with the description, delete the original story. With notecards, you would tear up the original.
+        Once they finish with the description, delete the original story. With notecards, you would tear up the
+        original.
       </li>
     </ol>
 
@@ -89,10 +91,10 @@
 
     <p>
       I was hoping to provide some videos for you to watch prior to the meeting to give you an idea of how it should
-      operate. Unfortunately, the drift away from Agile's core principles means most free materials focus too much on the
-      rituals of particular methodologies. I will therefore be conducting the first 10-15 minutes of our meeting to give
-      you an idea of how it should work. Stories don't seem to appear on the Github board in real time, so you will have
-      to refresh the page occasionally to see what I add during this period.
+      operate. Unfortunately, the drift away from Agile's core principles means most free materials focus too much on
+      the rituals of particular methodologies. I will therefore be conducting the first 10-15 minutes of our meeting to
+      give you an idea of how it should work. Stories don't seem to appear on the Github board in real time, so you will
+      have to refresh the page occasionally to see what I add during this period.
     </p>
   </section>
 
@@ -100,8 +102,9 @@
     <h2>Additional Reading</h2>
 
     <p>
-      I know this meeting can be extremely daunting, so here are some additional articles you can read. None of these are
-      required reading, they are here as supplementary materials if that helps you get more comfortable with the process.
+      I know this meeting can be extremely daunting, so here are some additional articles you can read. None of these
+      are required reading, they are here as supplementary materials if that helps you get more comfortable with the
+      process.
     </p>
 
     <ul>
@@ -123,9 +126,9 @@
     </ul>
 
     <p>
-      There's going to be a lot of terminology and context you won't be familiar with in those articles, feel free to just
-      ignore those parts. In particular, ignore the "As a … I want … So that …" form for now, it usually ends up being
-      overkill when capturing a simple idea.
+      There's going to be a lot of terminology and context you won't be familiar with in those articles, feel free to
+      just ignore those parts. In particular, ignore the "As a … I want … So that …" form for now, it usually ends up
+      being overkill when capturing a simple idea.
     </p>
   </section>
 </Lecture>

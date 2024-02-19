@@ -4,7 +4,7 @@
   export let value: Date;
 
   let language: string | undefined = undefined;
-  onMount(() => language = navigator.language);
+  onMount(() => (language = navigator.language));
 </script>
 
 <time>
