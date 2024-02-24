@@ -14,6 +14,11 @@
   </p>
 
   <section>
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/d/df/UX_Honeycomb.png"
+      alt="Honeycomb model of UX: Useful, Usable, Desirable, Valuable, Findable, Accessible and Credible"
+    />
+
     <h2>User Experience</h2>
 
     <p>
@@ -22,11 +27,6 @@
       >. At it's core, think of it as those domains of web development centered on improving the impression the user has
       when visiting the site.
     </p>
-
-    <img
-      src="https://upload.wikimedia.org/wikipedia/commons/d/df/UX_Honeycomb.png"
-      alt="Honeycomb model of UX: Useful, Usable, Desirable, Valuable, Findable, Accessible and Credible"
-    />
 
     <p>
       One way to think about the areas covered is the <a href="http://semanticstudios.com/user_experience_design/"
@@ -247,6 +247,6 @@
   img {
     max-width: 100%;
     width: 15em;
-    float: left;
+    float: right;
   }
 </style>

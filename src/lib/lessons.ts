@@ -8,6 +8,7 @@ import SiteResearch from "$lib/assignments/SiteResearch.svelte";
 import StoryCreation from "$lib/assignments/StoryCreation.svelte";
 import SvelteAndSvelteKit from "$lib/assignments/SvelteAndSvelteKit.svelte";
 import DeployYourSite from "$lib/assignments/DeployYourSite.svelte";
+import SemanticTags from "$lib/assignments/SemanticTags.svelte";
 
 import type { ComponentType } from "svelte";
 
@@ -103,9 +104,11 @@ const calendar: Week[] = [
       component: UXAndAccessibility,
     },
     assignment: {
-      title: "Static Content and User Profiles",
+      title: "Semantic Tags",
+      path_name: "semantic-tags",
       due: new Date(2024, 1, 27),
       revisions: new Date(2024, 2, 1),
+      component: SemanticTags,
     },
   },
 
