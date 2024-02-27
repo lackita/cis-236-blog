@@ -3,12 +3,14 @@ import MeetWithClient from "$lib/lectures/MeetWithClient.svelte";
 import PlanningAndWebFrameworks from "$lib/lectures/PlanningAndWebFrameworks.svelte";
 import Hosting from "$lib/lectures/Hosting.svelte";
 import UXAndAccessibility from "$lib/lectures/UXAndAccessibility.svelte";
+import PrototypingAndDemoDayPrep from "$lib/lectures/PrototypingAndDemoDayPrep.svelte";
 
 import SiteResearch from "$lib/assignments/SiteResearch.svelte";
 import StoryCreation from "$lib/assignments/StoryCreation.svelte";
 import SvelteAndSvelteKit from "$lib/assignments/SvelteAndSvelteKit.svelte";
 import DeployYourSite from "$lib/assignments/DeployYourSite.svelte";
 import SemanticTags from "$lib/assignments/SemanticTags.svelte";
+import Prototype from "$lib/assignments/Prototype.svelte";
 
 import type { ComponentType } from "svelte";
 
@@ -100,7 +102,7 @@ const calendar: Week[] = [
     lecture: {
       date: new Date(2024, 1, 20),
       title: "User Experience and Accessibility",
-      path_name: "us-and-accessibility",
+      path_name: "ux-and-accessibility",
       component: UXAndAccessibility,
     },
     assignment: {
@@ -115,11 +117,16 @@ const calendar: Week[] = [
   {
     lecture: {
       date: new Date(2024, 1, 27),
-      title: "Demo Day Prep",
+      title: "Prototyping and Demo Day Prep",
+      path_name: "prototyping-and-demo-day-prep",
+      component: PrototypingAndDemoDayPrep,
     },
     assignment: {
-      title: "Demo Preparation",
+      title: "Prototype",
       due: new Date(2024, 2, 5),
+      path_name: "prototype",
+      revisions: new Date(2024, 2, 5),
+      component: Prototype,
     },
   },
 
