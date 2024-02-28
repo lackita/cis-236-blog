@@ -39,6 +39,12 @@
   </p>
 
   <p>
+    When presenting these prototypes, you should plan to be able to make adjustments on the fly to quickly iterate
+    towards something that matches the clients expectations more closely. This will take a bit of practice, but being
+    able to see the impact of various tweaks in real time will allow us to arrive at a good design much more quickly.
+  </p>
+
+  <p>
     Unlike our usual assignments, because it will be presented during the demo, you will not have additional time to
     make revisions. I can still offer feedback if you get your changes in early, just know the class date is a stricter
     deadline.
