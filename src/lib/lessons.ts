@@ -4,6 +4,7 @@ import PlanningAndWebFrameworks from "$lib/lectures/PlanningAndWebFrameworks.sve
 import Hosting from "$lib/lectures/Hosting.svelte";
 import UXAndAccessibility from "$lib/lectures/UXAndAccessibility.svelte";
 import PrototypingAndDemoDayPrep from "$lib/lectures/PrototypingAndDemoDayPrep.svelte";
+import FeedbackDemoDay from "$lib/lectures/FeedbackDemoDay.svelte";
 
 import SiteResearch from "$lib/assignments/SiteResearch.svelte";
 import StoryCreation from "$lib/assignments/StoryCreation.svelte";
@@ -11,6 +12,7 @@ import SvelteAndSvelteKit from "$lib/assignments/SvelteAndSvelteKit.svelte";
 import DeployYourSite from "$lib/assignments/DeployYourSite.svelte";
 import SemanticTags from "$lib/assignments/SemanticTags.svelte";
 import Prototype from "$lib/assignments/Prototype.svelte";
+import FeedbackSummary from "$lib/assignments/FeedbackSummary.svelte";
 
 import type { ComponentType } from "svelte";
 
@@ -134,10 +136,14 @@ const calendar: Week[] = [
     lecture: {
       date: new Date(2024, 2, 5),
       title: "Demo Day",
+      path_name: "feedback-demo-day",
+      component: FeedbackDemoDay,
     },
     assignment: {
       title: "Feedback Summary",
       due: new Date(2024, 2, 8),
+      path_name: "feedback-summary",
+      component: FeedbackSummary,
     },
   },
 
