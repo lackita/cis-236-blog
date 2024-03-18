@@ -5,6 +5,7 @@ import Hosting from "$lib/lectures/Hosting.svelte";
 import UXAndAccessibility from "$lib/lectures/UXAndAccessibility.svelte";
 import PrototypingAndDemoDayPrep from "$lib/lectures/PrototypingAndDemoDayPrep.svelte";
 import FeedbackDemoDay from "$lib/lectures/FeedbackDemoDay.svelte";
+import Testing from "$lib/lectures/Testing.svelte";
 
 import SiteResearch from "$lib/assignments/SiteResearch.svelte";
 import StoryCreation from "$lib/assignments/StoryCreation.svelte";
@@ -158,7 +159,9 @@ const calendar: Week[] = [
   {
     lecture: {
       date: new Date(2024, 2, 19),
-      title: "Databases",
+      title: "Testing",
+      path_name: "testing",
+      component: Testing,
     },
     assignment: {
       title: "Schema Design",
@@ -170,10 +173,10 @@ const calendar: Week[] = [
   {
     lecture: {
       date: new Date(2024, 2, 26),
-      title: "Shopping Carts",
+      title: "Databases",
     },
     assignment: {
-      title: "Shopping cart and item pages",
+      title: "Schema Design",
       due: new Date(2024, 3, 2),
       revisions: new Date(2024, 3, 5),
     },
