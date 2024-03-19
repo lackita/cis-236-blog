@@ -206,10 +206,10 @@
 
     <p>
       UI testing and designing a system to avoid such tests is a rather advanced topic, outside the scope of this
-      course. Getting practice writing tests is important, though, so as we move into a domain where testing is necessary
-      I'll begin adding libraries to lead you down the right path. How to use these will be described in the issues we
-      select for the week, and if you're not sure how to test something you should reach out so we can work out a
-      strategy.
+      course. Getting practice writing tests is important, though, so as we move into a domain where testing is
+      necessary I'll begin adding libraries to lead you down the right path. How to use these will be described in the
+      issues we select for the week, and if you're not sure how to test something you should reach out so we can work
+      out a strategy.
     </p>
   </section>
 </Lecture>

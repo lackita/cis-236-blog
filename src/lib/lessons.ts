@@ -14,6 +14,7 @@ import DeployYourSite from "$lib/assignments/DeployYourSite.svelte";
 import SemanticTags from "$lib/assignments/SemanticTags.svelte";
 import Prototype from "$lib/assignments/Prototype.svelte";
 import FeedbackSummary from "$lib/assignments/FeedbackSummary.svelte";
+import ContinuousIntegration from "$lib/assignments/ContinuousIntegration.svelte";
 
 import type { ComponentType } from "svelte";
 
@@ -164,9 +165,11 @@ const calendar: Week[] = [
       component: Testing,
     },
     assignment: {
-      title: "Schema Design",
+      title: "Continuous Integration",
       due: new Date(2024, 2, 26),
       revisions: new Date(2024, 2, 29),
+      path_name: "continuous-integration",
+      component: ContinuousIntegration,
     },
   },
 
@@ -255,7 +258,7 @@ function lecture(path_name: string): Lecture {
 }
 
 function assignment(path_name: string): Assignment {
-  return calendar.find((week) => week.assignment!.path_name === path_name)!.assignment as Assignment;
+  return calendar.find((week) => week.assignment?.path_name === path_name)!.assignment as Assignment;
 }
 
 const current_lecture: Lecture = calendar.reduce(
