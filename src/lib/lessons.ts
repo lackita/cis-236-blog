@@ -6,6 +6,7 @@ import UXAndAccessibility from "$lib/lectures/UXAndAccessibility.svelte";
 import PrototypingAndDemoDayPrep from "$lib/lectures/PrototypingAndDemoDayPrep.svelte";
 import FeedbackDemoDay from "$lib/lectures/FeedbackDemoDay.svelte";
 import Testing from "$lib/lectures/Testing.svelte";
+import Databases from "$lib/lectures/Databases.svelte";
 
 import SiteResearch from "$lib/assignments/SiteResearch.svelte";
 import StoryCreation from "$lib/assignments/StoryCreation.svelte";
@@ -177,6 +178,8 @@ const calendar: Week[] = [
     lecture: {
       date: new Date(2024, 2, 26),
       title: "Databases",
+      path_name: "databases",
+      component: Databases,
     },
     assignment: {
       title: "Schema Design",
@@ -258,7 +261,8 @@ function lecture(path_name: string): Lecture {
 }
 
 function assignment(path_name: string): Assignment {
-  return calendar.find((week) => week.assignment?.path_name === path_name)!.assignment as Assignment;
+  return calendar.find((week) => week.assignment?.path_name === path_name)!
+    .assignment as Assignment;
 }
 
 const current_lecture: Lecture = calendar.reduce(

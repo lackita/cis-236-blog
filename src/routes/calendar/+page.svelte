@@ -7,14 +7,16 @@
 <h1>Calendar</h1>
 
 <p>
-  Every class will have an article covering the same concepts that will be discussed when we meet. They will be posted
-  the day before the class on that subject, giving you time to review the material if you wish.
+  Every class will have an article covering the same concepts that will be discussed when we meet.
+  They will be posted the day before the class on that subject, giving you time to review the
+  material if you wish.
 </p>
 
 <p>
-  At the end of each class, you will receive an assignment that will be due by the start of the following class. We may
-  have several rounds of feedback on the assignment, all feedback is expected to be resolved and the associated pull
-  request merged by the Friday following the due date.
+  At the end of each class, you will receive an assignment that will be due by the start of the
+  following class. We may have several rounds of feedback on the assignment, all feedback is
+  expected to be resolved and the associated pull request merged by the Friday following the due
+  date.
 </p>
 
 <table>
