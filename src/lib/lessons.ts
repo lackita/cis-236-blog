@@ -16,6 +16,7 @@ import SemanticTags from "$lib/assignments/SemanticTags.svelte";
 import Prototype from "$lib/assignments/Prototype.svelte";
 import FeedbackSummary from "$lib/assignments/FeedbackSummary.svelte";
 import ContinuousIntegration from "$lib/assignments/ContinuousIntegration.svelte";
+import Checkout from "$lib/assignments/Checkout.svelte";
 
 import type { ComponentType } from "svelte";
 
@@ -182,21 +183,18 @@ const calendar: Week[] = [
       component: Databases,
     },
     assignment: {
-      title: "Schema Design",
-      due: new Date(2024, 3, 2),
-      revisions: new Date(2024, 3, 5),
+      title: "Checkout",
+      due: new Date(2024, 3, 9),
+      revisions: new Date(2024, 3, 12),
+      path_name: "checkout",
+      component: Checkout,
     },
   },
 
   {
     lecture: {
       date: new Date(2024, 3, 2),
-      title: "Authentication",
-    },
-    assignment: {
-      title: "Login pages and cart conversion",
-      due: new Date(2024, 3, 9),
-      revisions: new Date(2024, 3, 12),
+      title: "Concurrency",
     },
   },
 

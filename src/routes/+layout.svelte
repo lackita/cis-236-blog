@@ -87,4 +87,8 @@
   footer a {
     display: flex;
   }
+
+  footer img {
+    width: auto;
+  }
 </style>

@@ -53,8 +53,8 @@
       </table>
 
       <p>
-        Now we want to write the next value into the database. To accomplish this, you have a query to
-        identify the largest value, in this case 4, and insert a record that is 1 more than that
+        Now we want to write the next value into the database. To accomplish this, you have a query
+        to identify the largest value, in this case 4, and insert a record that is 1 more than that
         value.
       </p>
 

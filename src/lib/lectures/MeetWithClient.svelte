@@ -139,10 +139,3 @@
     </p>
   </section>
 </Lecture>
-
-<style>
-  img {
-    max-width: 100%;
-    width: 50em;
-  }
-</style>
