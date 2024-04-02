@@ -7,6 +7,7 @@ import PrototypingAndDemoDayPrep from "$lib/lectures/PrototypingAndDemoDayPrep.s
 import FeedbackDemoDay from "$lib/lectures/FeedbackDemoDay.svelte";
 import Testing from "$lib/lectures/Testing.svelte";
 import Databases from "$lib/lectures/Databases.svelte";
+import Concurrency from "$lib/lectures/Concurrency.svelte";
 
 import SiteResearch from "$lib/assignments/SiteResearch.svelte";
 import StoryCreation from "$lib/assignments/StoryCreation.svelte";
@@ -195,6 +196,8 @@ const calendar: Week[] = [
     lecture: {
       date: new Date(2024, 3, 2),
       title: "Concurrency",
+      path_name: "concurrency",
+      component: Concurrency,
     },
   },
 
