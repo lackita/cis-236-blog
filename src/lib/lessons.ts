@@ -19,6 +19,7 @@ import Prototype from "$lib/assignments/Prototype.svelte";
 import FeedbackSummary from "$lib/assignments/FeedbackSummary.svelte";
 import ContinuousIntegration from "$lib/assignments/ContinuousIntegration.svelte";
 import Checkout from "$lib/assignments/Checkout.svelte";
+import AddItem from "$lib/assignments/AddItem.svelte";
 
 import type { ComponentType } from "svelte";
 
@@ -210,9 +211,11 @@ const calendar: Week[] = [
       component: CookiesAndSessions,
     },
     assignment: {
-      title: "Adding items",
+      title: "Adding Item",
       due: new Date(2024, 3, 16),
       revisions: new Date(2024, 3, 19),
+      path_name: "add_item",
+      component: AddItem,
     },
   },
 
