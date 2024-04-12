@@ -8,6 +8,7 @@ import FeedbackDemoDay from "$lib/lectures/FeedbackDemoDay.svelte";
 import Testing from "$lib/lectures/Testing.svelte";
 import Databases from "$lib/lectures/Databases.svelte";
 import Concurrency from "$lib/lectures/Concurrency.svelte";
+import CookiesAndSessions from "$lib/lectures/CookiesAndSessions.svelte";
 
 import SiteResearch from "$lib/assignments/SiteResearch.svelte";
 import StoryCreation from "$lib/assignments/StoryCreation.svelte";
@@ -204,10 +205,12 @@ const calendar: Week[] = [
   {
     lecture: {
       date: new Date(2024, 3, 9),
-      title: "Payments",
+      title: "Cookies, Sessions and Caching",
+      path_name: "cookies-sessions-and-caching",
+      component: CookiesAndSessions,
     },
     assignment: {
-      title: "Checkout",
+      title: "Adding items",
       due: new Date(2024, 3, 16),
       revisions: new Date(2024, 3, 19),
     },
@@ -216,10 +219,10 @@ const calendar: Week[] = [
   {
     lecture: {
       date: new Date(2024, 3, 16),
-      title: "Monitoring",
+      title: "Authentication",
     },
     assignment: {
-      title: "North star metric",
+      title: "Backend user",
       due: new Date(2024, 3, 23),
       revisions: new Date(2024, 3, 26),
     },
@@ -228,10 +231,10 @@ const calendar: Week[] = [
   {
     lecture: {
       date: new Date(2024, 3, 23),
-      title: "Backend operations",
+      title: "APIs",
     },
     assignment: {
-      title: "Route planner",
+      title: "Inventory tracking",
       due: new Date(2024, 3, 30),
       revisions: new Date(2024, 4, 3),
     },
@@ -240,7 +243,7 @@ const calendar: Week[] = [
   {
     lecture: {
       date: new Date(2024, 3, 30),
-      title: "Prepare for final demo",
+      title: "Monitoring",
     },
     assignment: {
       title: "Prep for final demo",
