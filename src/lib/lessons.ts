@@ -9,6 +9,7 @@ import Testing from "$lib/lectures/Testing.svelte";
 import Databases from "$lib/lectures/Databases.svelte";
 import Concurrency from "$lib/lectures/Concurrency.svelte";
 import CookiesAndSessions from "$lib/lectures/CookiesAndSessions.svelte";
+import Serialization from "$lib/lectures/Serialization.svelte";
 
 import SiteResearch from "$lib/assignments/SiteResearch.svelte";
 import StoryCreation from "$lib/assignments/StoryCreation.svelte";
@@ -222,10 +223,12 @@ const calendar: Week[] = [
   {
     lecture: {
       date: new Date(2024, 3, 16),
-      title: "Authentication",
+      title: "Serialization",
+      path_name: "serialization",
+      component: Serialization,
     },
     assignment: {
-      title: "Backend user",
+      title: "Multiple items",
       due: new Date(2024, 3, 23),
       revisions: new Date(2024, 3, 26),
     },
