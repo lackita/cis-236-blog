@@ -21,6 +21,7 @@ import FeedbackSummary from "$lib/assignments/FeedbackSummary.svelte";
 import ContinuousIntegration from "$lib/assignments/ContinuousIntegration.svelte";
 import Checkout from "$lib/assignments/Checkout.svelte";
 import AddItem from "$lib/assignments/AddItem.svelte";
+import MultipleItems from "$lib/assignments/MultipleItems.svelte";
 
 import type { ComponentType } from "svelte";
 
@@ -214,7 +215,7 @@ const calendar: Week[] = [
     assignment: {
       title: "Adding Item",
       due: new Date(2024, 3, 16),
-      revisions: new Date(2024, 3, 19),
+      revisions: new Date(2024, 3, 21),
       path_name: "add_item",
       component: AddItem,
     },
@@ -228,9 +229,11 @@ const calendar: Week[] = [
       component: Serialization,
     },
     assignment: {
-      title: "Multiple items",
+      title: "Multiple Items",
       due: new Date(2024, 3, 23),
       revisions: new Date(2024, 3, 26),
+      path_name: "multiple-items",
+      component: MultipleItems,
     },
   },
 
