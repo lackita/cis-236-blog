@@ -23,6 +23,7 @@ import ContinuousIntegration from "$lib/assignments/ContinuousIntegration.svelte
 import Checkout from "$lib/assignments/Checkout.svelte";
 import AddItem from "$lib/assignments/AddItem.svelte";
 import MultipleItems from "$lib/assignments/MultipleItems.svelte";
+import SquareExploration from "$lib/assignments/SquareExploration.svelte";
 
 import type { ComponentType } from "svelte";
 
@@ -231,8 +232,8 @@ const calendar: Week[] = [
     },
     assignment: {
       title: "Multiple Items",
-      due: new Date(2024, 3, 23),
-      revisions: new Date(2024, 3, 26),
+      due: new Date(2024, 3, 26),
+      revisions: new Date(2024, 3, 30),
       path_name: "multiple-items",
       component: MultipleItems,
     },
@@ -246,9 +247,10 @@ const calendar: Week[] = [
       component: APIs,
     },
     assignment: {
-      title: "Inventory tracking",
+      title: "Square Exploration",
       due: new Date(2024, 3, 30),
-      revisions: new Date(2024, 4, 3),
+      path_name: "square-exploration",
+      component: SquareExploration,
     },
   },
 
