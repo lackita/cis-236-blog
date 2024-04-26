@@ -10,6 +10,7 @@ import Databases from "$lib/lectures/Databases.svelte";
 import Concurrency from "$lib/lectures/Concurrency.svelte";
 import CookiesAndSessions from "$lib/lectures/CookiesAndSessions.svelte";
 import Serialization from "$lib/lectures/Serialization.svelte";
+import APIs from "$lib/lectures/APIs.svelte";
 
 import SiteResearch from "$lib/assignments/SiteResearch.svelte";
 import StoryCreation from "$lib/assignments/StoryCreation.svelte";
@@ -241,6 +242,8 @@ const calendar: Week[] = [
     lecture: {
       date: new Date(2024, 3, 23),
       title: "APIs",
+      path_name: "apis",
+      component: APIs,
     },
     assignment: {
       title: "Inventory tracking",
