@@ -11,6 +11,7 @@ import Concurrency from "$lib/lectures/Concurrency.svelte";
 import CookiesAndSessions from "$lib/lectures/CookiesAndSessions.svelte";
 import Serialization from "$lib/lectures/Serialization.svelte";
 import APIs from "$lib/lectures/APIs.svelte";
+import Monitoring from "$lib/lectures/Monitoring.svelte";
 
 import SiteResearch from "$lib/assignments/SiteResearch.svelte";
 import StoryCreation from "$lib/assignments/StoryCreation.svelte";
@@ -258,6 +259,8 @@ const calendar: Week[] = [
     lecture: {
       date: new Date(2024, 3, 30),
       title: "Monitoring",
+      path_name: "monitoring",
+      component: Monitoring,
     },
     assignment: {
       title: "Prep for final demo",
