@@ -25,6 +25,7 @@ import Checkout from "$lib/assignments/Checkout.svelte";
 import AddItem from "$lib/assignments/AddItem.svelte";
 import MultipleItems from "$lib/assignments/MultipleItems.svelte";
 import SquareExploration from "$lib/assignments/SquareExploration.svelte";
+import FinalPresentation from "$lib/assignments/FinalPresentation.svelte";
 
 import type { ComponentType } from "svelte";
 
@@ -263,9 +264,11 @@ const calendar: Week[] = [
       component: Monitoring,
     },
     assignment: {
-      title: "Prep for final demo",
+      title: "Final Presentation",
       due: new Date(2024, 4, 7),
       revisions: new Date(2024, 4, 7),
+      path_name: "final_presentation",
+      component: FinalPresentation,
     },
   },
 
